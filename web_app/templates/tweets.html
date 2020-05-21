@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "layout.html" %}
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tweets Page</h1>
+
+    <p>{{ message }}</p>
+
+    {% if tweets %}
+        <ul>
+        {% for tweet in tweets %}
+            <li>{{ tweet.full_text }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Tweets not found.</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>
