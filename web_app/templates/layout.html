@@ -27,8 +27,9 @@
     <!-- see: https://jinja.palletsprojects.com/en/2.11.x/tricks/ -->
     <!-- see: https://getbootstrap.com/docs/4.0/components/navbar/ -->
     {% set nav_links = [
+      ('/', 'index', 'Home'),
       ('/users', 'users', 'Users'),
-      ('/users/new', 'new_user', 'New User'),
+      ('/users/new', 'get_user', 'New User'),
       ('/tweets', 'tweets', 'Tweets'),
       ('/tweets/new', 'new_tweets', 'New Tweets')
     ] -%}

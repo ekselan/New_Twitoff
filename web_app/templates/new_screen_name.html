@@ -9,14 +9,14 @@
 </head>
 <body>
 
-    <h1>New Users Page</h1>
+    <h1>New User and Tweets</h1>
 
     <p>Please fill out the form below to add a new user to the database</p>
 
-    <form action="/users/create" method="POST">
+    <form action="/users/<screen_name>" method="POST">
 
-        <label>Username:</label>
-        <input type="text" name="screen_name" placeholder="@twitter_handle" value="@twitter_handle">
+        <label>Screen Name:</label>
+        <input type="text" name="screen_name" placeholder="twitter_handle" value="twitter_handle">
 
         <button>Submit</button>
     </form>

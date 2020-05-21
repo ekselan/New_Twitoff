@@ -40,7 +40,7 @@ def list_users_for_humans():
 
 @user_routes.route("/users/new")
 def new_user():
-    return render_template("new_users.html")
+    return render_template("new_screen_name.html")
 
 
 @user_routes.route("/users/create", methods=["POST"])

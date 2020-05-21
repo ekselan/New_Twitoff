@@ -6,7 +6,7 @@ TODO: Clone the repo
 # Usage:
 - Run:
 ```sh
-FLASK_APP=abw_app flask run
+FLASK_APP=web_app flask run
 ```
 - Creating and Migrating the database:
 ```sh
