@@ -15,6 +15,7 @@ flask = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 pandas = "*"
+scikit-learn = "*"
 
 [requires]
 python_version = "3.8"
