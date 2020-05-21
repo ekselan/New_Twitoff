@@ -8,8 +8,8 @@ load_dotenv()
 BASILICA_API_KEY = os.getenv("BASILICA_API_KEY", default="OOPS")
 
 
-connection = Connection(BASILICA_API_KEY)
-print(type(connection))
+basilica_api_client = Connection(BASILICA_API_KEY)
+print(type(basilica_api_client))
 
 if __name__ == "__main__":
     

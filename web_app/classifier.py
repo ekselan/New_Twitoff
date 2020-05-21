@@ -31,7 +31,7 @@ def load_model():
 
 if __name__ == "__main__":
 
-    # train_and_save_model()
+    # train_and_save_model() # commented out after running
 
 
     clf = load_model()
