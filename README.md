@@ -19,6 +19,11 @@ FLASK_APP=web_app flask db migrate #> creates the db (with "alembic_version" tab
 FLASK_APP=web_app flask db upgrade #> creates the specified tables
 ```
 
+- Heroku URL
+```sh
+https://twitoff-abw.herokuapp.com/
+```
+
 # Code Snippets: Adding DS to a Web App
 ### Train and Save a model using pickle module:
 ```py
