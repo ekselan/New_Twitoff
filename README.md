@@ -23,6 +23,11 @@ FLASK_APP=web_app flask db upgrade #> creates the specified tables
 ```sh
 https://twitoff-abw.herokuapp.com/
 ```
+- Add Twitter user (and that user's tweets, if not protected)
+```url
+/users/<screen name>
+```
+e.g. URL/users/elonmusk
 
 # Code Snippets: Adding DS to a Web App
 ### Train and Save a model using pickle module:
