@@ -2,6 +2,9 @@
 
 from flask import Flask
 
+import os
+from dotenv import load_dotenv
+
 # from web_app.routes.home_routes import home_routes
 # from web_app.routes.book_routes import book_routes
 from web_app.routes.user_routes import user_routes
@@ -14,18 +17,22 @@ from web_app.models import db, migrate
 # DATABASE_URI = "sqlite:///web_app_99.db" # using relative filepath
 # using absolute filepath on Mac (recommended)
 # DATABASE_URI = "sqlite:////Users/ekselan/Documents/GitHub/33_Repo_DS14_Twitoff/Twitoff-ABW-DS-Unit-3-Sprint-3/twitoff_dev_14.db"
-DATABASE_URI = "sqlite:////Users/ekselan/Desktop/LAMBDA/New_Twitoff/new_twitoff.db"
+#DATABASE_URI = "sqlite:////Users/ekselan/Desktop/LAMBDA/New_Twitoff/new_twitoff.db"
 # DATABASE_URI =
 # "sqlite:///C:\\Users\\Username\\Desktop\\your-repo-name\\web_app_99.db"
 # # using absolute filepath on Windows (recommended) h/t:
 # https://stackoverflow.com/a/19262231/670433
 
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+SECRET_KEY = os.getenv("SECRET_KEY", default="super secrect")
 
 def create_app():
     app = Flask(__name__)
 
     # For use with database
-    app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URI
+    app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
     db.init_app(app)
     migrate.init_app(app, db)
 
